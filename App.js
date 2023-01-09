@@ -6,6 +6,8 @@ import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import Home from './screens/home'
 import { globalStyles } from './styles/global'
+import Navigator from './routes/homeStack'
+import { NavigationContainer } from '@react-navigation/native'
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
@@ -16,7 +18,7 @@ export default function App() {
     const onLayoutRootView = useCallback(async () => {
         if (fontsLoaded) {
             await SplashScreen.hideAsync();
-          return <Home />
+        //   return <Home />
         }
     }, [fontsLoaded]);
 
@@ -25,6 +27,15 @@ export default function App() {
     }
 
     return (
-        <Home />
+        // <Home />
+        <View style={globalStyles.container} onLayout={onLayoutRootView}>
+            <NavigationContainer>
+                <Navigator />
+            </NavigationContainer>
+            
+            {/* <Home /> */}
+            {/* <Text style={{ fontFamily: 'Inter-Black', fontSize: 30 }}>Inter Black</Text>
+            <Text style={{ fontSize: 30 }}>Platform Default</Text> */}
+        </View>
     );
 }
