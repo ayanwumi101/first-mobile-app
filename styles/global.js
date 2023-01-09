@@ -5,9 +5,14 @@ export const globalStyles = StyleSheet.create({
         padding: 35,
         flex: 1,
     },
-    titleText: {
-        fontFamily: 'Inter-Bold',
+     heading: {
+        fontFamily: 'Inter-Black',
         fontSize: 18,
+        color: '#333',
+    },
+    text: {
+        fontFamily: 'Inter-Regular',
+        fontSize: 16,
         color: '#333',
     },
     paragraph: {
