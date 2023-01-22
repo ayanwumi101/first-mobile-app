@@ -19,7 +19,7 @@ export const globalStyles = StyleSheet.create({
         fontSize: 16,
         color: '#333',
         paddingHorizontal: 15,
-        textAlign: 'justify',
+        // textAlign: 'justify',
         marginBottom: 5,
         lineHeight: 25,
     },
@@ -46,6 +46,9 @@ export const globalStyles = StyleSheet.create({
         marginVertical: 15,
         borderWidth: 1,
         borderColor: 'lightgrey'
+    },
+    bold: {
+        fontWeight: '900'
     }
     
 })
