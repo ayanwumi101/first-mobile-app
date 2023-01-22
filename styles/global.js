@@ -2,8 +2,8 @@ import {StyleSheet} from 'react-native'
 
 export const globalStyles = StyleSheet.create({
     container: {
-        paddingVertical: 25,
-        paddingHorizontal: 10,
+        paddingTop: 25,
+        paddingHorizontal: 0,
         flex: 1,
     },
      heading: {
@@ -17,9 +17,21 @@ export const globalStyles = StyleSheet.create({
         fontFamily: 'Inter-Regular',
         fontSize: 16,
         color: '#333',
+        paddingHorizontal: 15,
+        textAlign: 'justify',
+        marginBottom: 5,
+        lineHeight: 25,
     },
     paragraph: {
         marginVertical: 8,
         lineHeight: 20,
-    }  
+    },
+    button_container: {
+        paddingHorizontal: 30,
+        margin: 'auto',
+        marginTop: 20,
+        fontFamily: 'Inter-Black',
+        textAlign: 'center'
+    },
+    
 })
