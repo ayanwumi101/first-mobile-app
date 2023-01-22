@@ -5,6 +5,7 @@ export const globalStyles = StyleSheet.create({
         paddingTop: 25,
         paddingHorizontal: 0,
         flex: 1,
+        marginBottom: 10,
     },
      heading: {
         fontFamily: 'Inter-Black',
@@ -33,5 +34,18 @@ export const globalStyles = StyleSheet.create({
         fontFamily: 'Inter-Black',
         textAlign: 'center'
     },
+    reviews_container: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        marginHorizontal: 10,
+        borderRadius: 3,
+        marginVertical: 15,
+        borderWidth: 1,
+        borderColor: 'lightgrey'
+    }
     
 })

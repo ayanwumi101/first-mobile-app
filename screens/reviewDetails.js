@@ -13,6 +13,11 @@ const ReviewDetails = ({navigation}) => {
             <Text style={globalStyles.heading}>Welcome to Review Details page</Text>
             <Text style={globalStyles.text}>You can find the reviews for all our products below.</Text>
 
+            <View>
+                <Text>{navigation.getParam('title')}</Text>
+                <Text>{navigation.getParam('name')}</Text>
+            </View>
+
             <View style={globalStyles.button_container}>
                 <Button title='Go to About page' onPress={handlePress}  />
             </View>
