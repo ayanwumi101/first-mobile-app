@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import React, {useState} from 'react'
 import { StatusBar } from 'expo-status-bar';
 import { useCallback } from 'react';
@@ -6,7 +7,7 @@ import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import Home from './screens/home'
 import { globalStyles } from './styles/global'
-import Navigator from './routes/homeStack'
+import Navigator from './routes/drawer'
 import { NavigationContainer } from '@react-navigation/native'
 SplashScreen.preventAutoHideAsync();
 

@@ -1,5 +1,4 @@
 import {createStackNavigator} from '@react-navigation/stack'
-// import {NavigationContainer} from '@react-navigation/native'
 import Home from '../screens/home';
 import ReviewDetails from '../screens/reviewDetails';
 import About from '../screens/about'
@@ -7,7 +6,7 @@ import { globalStyles } from '../styles/global';
 
 const Stack = createStackNavigator();
 
-const MyStack = () => {
+const HomeStack = () => {
     return (
         <Stack.Navigator
             screenOptions={{
@@ -49,4 +48,4 @@ const MyStack = () => {
     )
 }
 
-export default MyStack
+export default HomeStack
