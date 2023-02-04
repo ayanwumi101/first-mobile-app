@@ -2,7 +2,7 @@ import 'react-native-gesture-handler';
 import React, {useState} from 'react'
 import { StatusBar } from 'expo-status-bar';
 import { useCallback } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, ImageBackground } from 'react-native';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import Home from './screens/home'
@@ -27,10 +27,13 @@ export default function App() {
     }
 
     return (
-        // <Home />
+        
         <View style={globalStyles.container} onLayout={onLayoutRootView}>
+            
             <NavigationContainer>
+                {/* <ImageBackground source={require('./assets/quiz2.jpg')}> */}
                 <Navigator />
+                {/* </ImageBackground> */}
             </NavigationContainer>
             
             {/* <Home /> */}
