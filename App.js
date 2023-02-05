@@ -29,11 +29,9 @@ export default function App() {
     return (
         
         <View style={globalStyles.container} onLayout={onLayoutRootView}>
-            
+            <StatusBar style='auto' />
             <NavigationContainer>
-                {/* <ImageBackground source={require('./assets/quiz2.jpg')}> */}
                 <Navigator />
-                {/* </ImageBackground> */}
             </NavigationContainer>
             
             {/* <Home /> */}

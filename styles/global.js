@@ -6,6 +6,7 @@ export const globalStyles = StyleSheet.create({
     paddingHorizontal: 0,
     flex: 1,
     marginBottom: 10,
+    fontFamily: "Inter-Regular",
   },
   heading: {
     fontFamily: "Inter-Black",
@@ -20,8 +21,8 @@ export const globalStyles = StyleSheet.create({
     color: "#333",
     paddingHorizontal: 15,
     // textAlign: 'justify',
-    marginBottom: 5,
-    lineHeight: 25,
+    marginBottom: 10,
+    lineHeight: 32,
   },
   paragraph: {
     marginVertical: 8,
@@ -75,5 +76,18 @@ export const globalStyles = StyleSheet.create({
   closeIcon: {
     marginTop: 20,
     marginBottom: 20,
+  },
+  formContainer: {
+    paddingVertical: 10,
+    paddingHorizontal: 25,
+  },
+  input: {
+    fontFamily: "Inter-Regular",
+    marginBottom: 18,
+    borderWidth: 1,
+    borderColor: "lightgrey",
+    paddingHorizontal: 13,
+    paddingVertical: 7,
+    borderRadius: 5,
   },
 });
