@@ -83,11 +83,17 @@ export const globalStyles = StyleSheet.create({
   },
   input: {
     fontFamily: "Inter-Regular",
-    marginBottom: 18,
+    marginBottom: 15,
     borderWidth: 1,
     borderColor: "lightgrey",
     paddingHorizontal: 13,
     paddingVertical: 7,
     borderRadius: 5,
+  },
+  errorText: {
+    color: "tomato",
+    fontFamily: "Inter-Regular",
+    textAlign: 'center', 
+    marginBottom: 10
   },
 });
