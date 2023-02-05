@@ -5,6 +5,7 @@ import {globalStyles} from '../styles/global'
 import {data} from './data'
 import {MaterialIcons} from '@expo/vector-icons'
 import ReviewForm from './reviewForm'
+import CustomButton from '../shared/button'
 
 
 const Home = ({navigation}) => {
@@ -71,7 +72,7 @@ const Home = ({navigation}) => {
              />
 
             <View style={globalStyles.button_container}>
-                <Button title='Go to about page' style={globalStyles.button} onPress={pressHandler} />
+                <CustomButton text='Go to about page' onPress={pressHandler} />
             </View>
             
         </View>

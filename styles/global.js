@@ -93,7 +93,21 @@ export const globalStyles = StyleSheet.create({
   errorText: {
     color: "tomato",
     fontFamily: "Inter-Regular",
-    textAlign: 'center', 
-    marginBottom: 10
+    textAlign: "center",
+    marginBottom: 10,
+  },
+  buttonContainer: {
+    backgroundColor: "#4caf50",
+    border: "none",
+    padding: 15,
+    color: "white",
+    borderRadius: 6,
+    fontFamily: "Inter-Regular",
+  },
+  buttonText: {
+    fontFamily: "Inter-Regular",
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center",
   },
 });

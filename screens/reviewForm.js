@@ -3,6 +3,7 @@ import {View, TextInput, Button, Text} from 'react-native'
 import {Formik} from 'formik'
 import { globalStyles } from '../styles/global'
 import * as yup from 'yup'
+import CustomButton from '../shared/button'
 
 
 
@@ -12,7 +13,7 @@ const reviewSchema = yup.object({
     review: yup.string().required('*this field is required!'),
     rating: yup.number().required('*this field is required!').integer().min(1).max(5),
     hobbies: yup.string().required('*this field is required!'),
-})
+});
 
 const reviewForm = ({addReview}) => {
 
@@ -32,16 +33,18 @@ const reviewForm = ({addReview}) => {
                         placeholder='Please input your Name'
                         style={globalStyles.input}
                         onChangeText={handleChange('name')}
+                        onBlur={handleBlur('name')}
                         value={values.name}
                     />
                       <View>
-                        {errors.name && touched.name ? (<Text style={globalStyles.errorText}>{errors.name}</Text> ) : null}
+                          {errors.name && touched.name ? (<Text style={globalStyles.errorText}>{errors.name}</Text>) : null}
                       </View>
 
                     <TextInput 
                         placeholder='Your hobbies'
                         style={globalStyles.input}
                         onChangeText={handleChange('hobbies')}
+                        onBlur={handleBlur('hobbies')}
                         value={values.hobbies}
                     />
                       <View>
@@ -52,6 +55,7 @@ const reviewForm = ({addReview}) => {
                         placeholder='Please input your department'
                         style={globalStyles.input}
                         onChangeText={handleChange('department')}
+                        onBlur={handleBlur('department')}
                         value={values.department}
                     />
                       <View>
@@ -59,20 +63,10 @@ const reviewForm = ({addReview}) => {
                       </View>
 
                     <TextInput 
-                        placeholder='Please input your review'
-                        multiline
-                        style={globalStyles.input}
-                        onChangeText={handleChange('review')}
-                        value={values.review}
-                    />
-                      <View>
-                          {errors.review && touched.review ? (<Text style={globalStyles.errorText}>{errors.review}</Text>) : null}
-                      </View>
-
-                     <TextInput 
                         placeholder='Rating'
                         style={globalStyles.input}
                         onChangeText={handleChange('rating')}
+                        onBlur={handleBlur('rating')}
                         keyboardType='numeric'
                         value={values.rating}
                     />
@@ -80,7 +74,20 @@ const reviewForm = ({addReview}) => {
                           {errors.rating && touched.rating ? (<Text style={globalStyles.errorText}>{errors.rating}</Text>) : null}
                       </View>
 
-                    <Button title='Submit review' color='#4ae' onPress={handleSubmit} />
+                    <TextInput 
+                        placeholder='Please input your review'
+                        multiline
+                        minHeight={40}
+                        style={globalStyles.input}
+                        onChangeText={handleChange('review')}
+                        onBlur={handleBlur('review')}
+                        value={values.review}
+                    />
+                      <View>
+                          {errors.review && touched.review ? (<Text style={globalStyles.errorText}>{errors.review}</Text>) : null}
+                      </View>
+
+                    <CustomButton text='Submit Review' onPress={handleSubmit} />
                 </View>
             )}
         </Formik>
